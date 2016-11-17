@@ -31,6 +31,23 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Создайте массив из 20-ти первых чисел Фибоначчи и выведите его на экран. 
+        int summ = 1;
+        int fibonachi [] = new int[20];
+        fibonachi[0]=1;
+        for(int i = 1; i <= fibonachi.length-1; i++)
+        {
+            if (i<=1){
+                summ = 1;
+            }
+            else summ = fibonachi [i-2] + fibonachi [i-1];
+            fibonachi[i] = summ;
+        }
+        System.out.println(Arrays.toString(fibonachi));
+
+
+
+
         getDaysOfWeekValue(3); //5.   Составить программу вывода на экран любого элемента массива по его индексу.
 
 
